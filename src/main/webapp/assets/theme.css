@@ -92,11 +92,10 @@ ul li {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.theme-panel {
-	padding: 20px 30px;
-	margin-top: 30px;
-	min-height: 250px;
+.theme-panel { position: relative; }
+.theme-panel-centered {
+	position: absolute;
+	margin: 0
 }
 
 /* background: rgb(106,37,105); background: rgba(106,37,105,0.7);   */
@@ -191,12 +190,21 @@ ul li {
 	color: #dedede;
 }
 
-.what-we-do {
+.what-we-do-foreground-layer {
 	background: url('/images/insights-02b.jpg') 50% 50% no-repeat;
+}
+.what-we-do {
+	background: rgba( 80,80,80,0.6 );
 	color: white;
-	padding: 30px 30px 130px;
-	margin-bottom: 50px;
+	text-transform: lowercase;
 	font-size: 1.5em;
+}
+
+.what-we-do h2 {
+	font-weight: 900;
+	letter-spacing: -0.08em;
+	line-height: 1em;
+	font-family: "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
 }
 
 .customer-thumbs { margin-top: 50px; }

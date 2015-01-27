@@ -6,53 +6,82 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
 		<link rel="stylesheet" href="/assets/theme.css" />
-		<!--script type="text/javascript" src="/assets/zepto.min.js"></script>
-		<script type="text/javascript" src="/assets/helden.min.js"></script>
+		<script type="text/javascript" src="/assets/zepto.min.js"></script>
+		<!--script type="text/javascript" src="/assets/helden.min.js"></script>
 		<script type="text/javascript" src="/assets/helden.ui.min.js"></script-->
+		<script type="text/javascript">
+			$(function(){
+
+				var panels = $(".theme-panel")
+				var titles = $(".theme-panel .theme-panel-centered")
+
+				function centerWelcomePanel(){
+					var windowWidth = window.innerWidth
+					var windowHeight = window.innerHeight
+					for ( var i=0; i<panels.length; i++ ){
+						var title = $(titles[i])
+						var panel = $(panels[i])
+						var top = (windowHeight - title.height())/2
+						var left = (windowWidth - title.width())/2
+						panel.css( "min-height", windowHeight + "px" )
+						title.attr("style","top: " + top + "px; left:" + left + "px")
+					}
+					setTimeout( centerWelcomePanel, 500 )
+				}
+
+				centerWelcomePanel()
+			})
+		</script>
 	</head>
 	<body>
 		
-		<div class="what-we-do">
-		
-			<div class="theme-header">
-				<div class="theme-container">
-					<img class="small-logo-image" src="/assets/logo-white.png" />
+		<div class="what-we-do-foreground-layer">
+			<div class="theme-panel what-we-do">
+			
+				<div class="theme-header">
+					<div class="theme-container">
+						<img class="small-logo-image" src="/assets/logo-white.png" />
+					</div>
 				</div>
-			</div>
-
-			<div class="inspirational-quote theme-centered">
-				<h3>To improve is to change; to be perfect is to change often</h3>
-				<p>Most of time, solve our customer problems isn't enough. It is expected to treat every task as a challenge and accomplish it with discipline and dedication.</p>
-			</div>
-
-		</div>
-
-		<div class="theme-container">
-		
-			<div class="theme-container">
+	
 				<div class="inspirational-quote theme-centered">
-					<h3>We are engaged to find well fitted solutions to help you to:</h3>
+					<h2 class="theme-panel-centered">To improve is to change;<br/>
+					to be perfect is to change often</h2>
+	<!-- 				<p></p> -->
 				</div>
+	
 			</div>
-
-			<ul class="we-can-help-you theme-centered">
-				<li class="theme-bg-color-one">
-					<h4>GET AHEAD AND STAY THERE</h4>
-					<p>Get powerful ideas to market fast</p>
-				</li>
-				<li class="theme-bg-color-two">
-					<h4>CREATE WINNING PRODUCTS</h4>
-					<p>Discover and deliver disruptive new offerings</p>
-				</li>
-				<li class="theme-bg-color-three">
-					<h4>UNLOCK YOUR ENTERPRISE POTENTIAL</h4>
-					<p>Integrate new digital experiences with core systems</p>
-				</li>
-			</ul>
 		</div>
 
 		<div class="theme-panel">
-			<div class="theme-container">
+			<div class="theme-container theme-panel-centered">
+				<div class="theme-container">
+					<div class="inspirational-quote theme-centered">
+						<h3>Most of time, solve our customer problems isn't enough. It is expected
+						to treat every task as a challenge and accomplish it with discipline
+						and dedication. We are engaged to find well fitted solutions to help you to:</h3>
+					</div>
+				</div>
+	
+				<ul class="we-can-help-you theme-centered">
+					<li class="theme-bg-color-one">
+						<h4>GET AHEAD AND STAY THERE</h4>
+						<p>Get powerful ideas to market fast</p>
+					</li>
+					<li class="theme-bg-color-two">
+						<h4>CREATE WINNING PRODUCTS</h4>
+						<p>Discover and deliver disruptive new offerings</p>
+					</li>
+					<li class="theme-bg-color-three">
+						<h4>UNLOCK YOUR ENTERPRISE POTENTIAL</h4>
+						<p>Integrate new digital experiences with core systems</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="theme-panel">
+			<div class="theme-container theme-panel-centered">
 
 				<div class="inspirational-quote theme-centered">
 					<h2>What we do</h2>
@@ -81,7 +110,7 @@
 		</div>
 
 		<div class="theme-panel">
-			<div class="theme-container">
+			<div class="theme-container theme-panel-centered">
 			
 				<div class="inspirational-quote theme-centered">
 					<h2>Some recent happy customers</h2>
@@ -95,7 +124,7 @@
 		</div>
 
 		<div class="theme-panel">
-			<div class="theme-container">
+			<div class="theme-container theme-panel-centered">
 			
 				<div class="inspirational-quote theme-centered">
 					<h2>What they say about us</h2>
