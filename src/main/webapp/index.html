@@ -7,29 +7,40 @@
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
 		<link rel="stylesheet" href="/assets/theme.css" />
 		<script type="text/javascript" src="/assets/zepto.min.js"></script>
-		<!--script type="text/javascript" src="/assets/helden.min.js"></script>
-		<script type="text/javascript" src="/assets/helden.ui.min.js"></script-->
 		<script type="text/javascript">
 			$(function(){
 
-				var panels = $(".theme-panel")
-				var titles = $(".theme-panel .theme-panel-centered")
+                var panels = $(".what-we-do-foreground-layer .theme-panel")
+                var titles = $(".what-we-do-foreground-layer .theme-panel .theme-panel-centered")
 
 				function centerWelcomePanel(){
 					var windowWidth = window.innerWidth
-					var windowHeight = window.innerHeight
 					for ( var i=0; i<panels.length; i++ ){
 						var title = $(titles[i])
-						var panel = $(panels[i])
-						var top = (windowHeight - title.height())/2
+                        var minHeight = $(panels[i]).height();
+						var top = (minHeight - title.height())/2
 						var left = (windowWidth - title.width())/2
-						panel.css( "min-height", windowHeight + "px" )
 						title.attr("style","top: " + top + "px; left:" + left + "px")
 					}
 					setTimeout( centerWelcomePanel, 500 )
 				}
 
+				function definePanelHeight(){
+					for ( var i=0; i<panels.length; i++ ){
+						var title = $(titles[i])
+						var panel = $(panels[i])
+                        var minHeight = title.height() + panel.height() + 100;
+						panel.css( "min-height", minHeight + "px" )
+					}
+				}
+
+				function makeLocalAnchorsAbleToScrollSmothly(){
+					
+				}
+
+                definePanelHeight()
 				centerWelcomePanel()
+				makeLocalAnchorsAbleToScrollSmothly()
 			})
 		</script>
 	</head>
@@ -45,86 +56,118 @@
 				</div>
 	
 				<div class="inspirational-quote theme-centered">
-					<h2 class="theme-panel-centered">To improve is to change;<br/>
-					to be perfect is to change often</h2>
-	<!-- 				<p></p> -->
+					<h2 class="theme-panel-centered">
+						Perante ao mundo que muda,<br/>
+                        mais vale pensar a mudança<br/>
+                        que mudar o pensamento.
+					</h2>
 				</div>
 	
 			</div>
 		</div>
 
-		<div class="theme-panel">
-			<div class="theme-container theme-panel-centered">
+		<a name="we-can-help-you">
+			<div class="theme-panel panel-we-can-help-you">
+				
 				<div class="theme-container">
-					<div class="inspirational-quote theme-centered">
-						<h3>Most of time, solve our customer problems isn't enough. It is expected
-						to treat every task as a challenge and accomplish it with discipline
-						and dedication. We are engaged to find well fitted solutions to help you to:</h3>
+					<div class="theme-container">
+						<div class="inspirational-quote theme-centered">
+							<h3>Na maioria das vezes, resolver o que o cliente pede nao e suficiente. Espera-se que toda tarefa seja
+							tratada como um desafio e enfrenta-los com dedicacao e disciplina. Nos da Texo estamos comprometidos
+							a encontrar soluçoes bem dimensionadas para ajudar voce a:</h3>
+						</div>
 					</div>
+		
+					<ul class="we-can-help-you theme-centered">
+						<li class="theme-bg-color-one">
+							<h4>TOMAR A FRENTE<br/>E FICAR LA</h4>
+							<p>Fomentar ideias para atingir rapidamente o mercado</p>
+						</li>
+						<li class="theme-bg-color-two">
+							<h4>CRIAR PRODUTOS VENCEDORES</h4>
+							<p>Explorar e entregar ofertas disruptivas</p>
+						</li>
+						<li class="theme-bg-color-three">
+							<h4>DESPERTAR O SEU POTENCIAL EMPRESARIAL</h4>
+							<p>Integrar novas experiencias digitais aos seus sistemas</p>
+						</li>
+					</ul>
 				</div>
-	
-				<ul class="we-can-help-you theme-centered">
-					<li class="theme-bg-color-one">
-						<h4>GET AHEAD AND STAY THERE</h4>
-						<p>Get powerful ideas to market fast</p>
-					</li>
-					<li class="theme-bg-color-two">
-						<h4>CREATE WINNING PRODUCTS</h4>
-						<p>Discover and deliver disruptive new offerings</p>
-					</li>
-					<li class="theme-bg-color-three">
-						<h4>UNLOCK YOUR ENTERPRISE POTENTIAL</h4>
-						<p>Integrate new digital experiences with core systems</p>
-					</li>
-				</ul>
 			</div>
-		</div>
+		</a>
 
-		<div class="theme-panel">
-			<div class="theme-container theme-panel-centered">
+		<div class="theme-panel panel-what-we-have-done">
+			<div class="theme-container">
 
 				<div class="inspirational-quote theme-centered">
-					<h2>What we do</h2>
-					<p>What we have offered to our customers in order to make them achieve higher goals</p>
+					<h2>O que fazemos</h2>
+					<p>O que temos ofertados aos nossos clientes para que eles atinjam grandes objetivos</p>
 				</div>
 
 				<ul class="what-we-have-done">
 					<li>
-						<h4>Specialist Outsourcing</h4>
-						<p>Here will be some impressive description about our specialists we offer as bodyshop allocation.</p>
+						<h4>Revitalizar o ciclo de vida do seu produto</h4>
+						<p>Aplicamos o que ha de mais moderno em Continuous Integration e Continuos Delivery para garantir que o time possa focar rapidamente na melhoria do software.</p>
 					</li>
 					<li>
-						<h4>Specialist Outsourcing</h4>
-						<p>Here will be some impressive description about our specialists we offer as bodyshop allocation.</p>
+						<h4>Ajustes de alta performance para o seu produto</h4>
+						<p>Garantimos que o seu software esteja dimensionado para as altas demandas de seus clientes. Aplicamos analise de consumo de memoria, identificacao de gargalos e pontos de falha e criamos plano para evitar que poss´iveis problemas identificados nao se repitam.</p>
 					</li>
 					<li>
-						<h4>Specialist Outsourcing</h4>
-						<p>Here will be some impressive description about our specialists we offer as bodyshop allocation.</p>
+						<h4>Reciclagem do time de desenvolvimento</h4>
+						<p>Aplicamos metodologias modernas ( XP, Scrum, Kanban ) para melhorar a organização do time de desenvolvimento, intensificar a frequencia da entrega e, desta forma, atingir o mercado rapidamente.</p>
 					</li>
 					<li>
-						<h4>Specialist Outsourcing</h4>
-						<p>Here will be some impressive description about our specialists we offer as bodyshop allocation.</p>
+						<h4>Desenvolvimento especializado</h4>
+						<p>É muito caro manter um profissional de alta padrão por um ano inteiro sendo que a empresa tem pequenos ciclos de alta demanda que duram poucos meses, com isso oferecemos profissionais qualificados para desenvolver soluções para Web ou integração entre softwares ( A2A, B2B ).</p>
 					</li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="theme-panel">
-			<div class="theme-container theme-panel-centered">
+		<div class="theme-panel panel-customers-description">
+			<div class="theme-container">
 			
 				<div class="inspirational-quote theme-centered">
-					<h2>Some recent happy customers</h2>
-					<div class="list-of-customer-thumb">
-						<img src="/assets/logo-ibratan.jpg" />
-						<img src="/assets/logo-thomson-reuters.jpg" />
+					<h2>Nossos clientes</h2>
+				</div>
+
+				<!--div class="list-of-customer-thumb">
+					<img src="/assets/logo-totvs.jpg" />
+					<img src="/assets/logo-navita.jpg" />
+				</div -->
+
+				<div class="customers-description">
+					
+					<div class="ibratan">
+                        <img src="/assets/logo-ibratan.jpg" />
+                        <p>
+                            Especializada em inteligência para avaliação de risco e concessão de crédito, a Ibratan contou com o apoio da
+                            Texo na reformulação do seu processo de desenvolvimento e na escolha de novas tecnologias para suas soluções.
+                            Após quase 20 anos no mercado para alcançar maiores resultados, ela adotou <b>Scrum e XP</b> em seu processo de desenvolvimento;
+                            <b>revitalizou a interface</b> de seus produtos com as novas tendências do <b>HTML 5</b> e preparou sua base de inteligência para
+                            <b>suportar altas demandas</b> de consultas de crédito.
+                        </p>
 					</div>
+
+                    <div class="thomson-reuters">
+                        <img src="/assets/logo-thomson-reuters.jpg" />
+                        <p>
+                            Atuando em praticamente todos os continentes, a Thomson Reuters é uma fonte respeitável de inteligência da informação
+                            oferencendo centenas de soluções à médias e grandes empresas. Desde de 2014, ela contou com o apoio de profissionais especializados
+                            em <b>desenvolvimento de software</b> e <b>Quality Assurance</b> da Texo para dar vazão nas altas demandas de seus clientes.
+                            Entre consultorias e treinamentos ofertados e o bom convivio de nossos profissionais com a T&amp;R, esta parceria se mostrou
+                            um grande aprendizado para ambas as partes, resultando em softwares de alta qualidade e performance.
+                        </p>
+                    </div>
+
 				</div>
 
 			</div>
 		</div>
 
-		<div class="theme-panel">
-			<div class="theme-container theme-panel-centered">
+		<!--div class="theme-panel">
+			<div class="theme-container">
 			
 				<div class="inspirational-quote theme-centered">
 					<h2>What they say about us</h2>
@@ -137,9 +180,9 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div-->
 
-		<div class="theme-panel theme-bg-color-two">
+		<div class="theme-panel panel-contact-us theme-bg-color-two">
 			<div class="theme-container">
 			
 				<div class="inspirational-quote theme-centered">
@@ -148,17 +191,13 @@
 
 				<div class="contact-us">
 					<div class="map-location">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3576.8308435494428!2d-48.84417471349242!3d-26.2995831988546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1421088757081" width="600" height="450" frameborder="0" style="border:0"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sbr!4v1424119534202!6m8!1m7!1sprfNsgCBIt5P804RBL7W5Q!2m2!1d-26.299146!2d-48.844548!3f183.20764687939086!4f-2.7353566395941726!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0"></iframe>
 					</div>
-					<div>
+					<div class="description">
 						
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="theme-footer">
-
 		</div>
 	</body>
 </html>

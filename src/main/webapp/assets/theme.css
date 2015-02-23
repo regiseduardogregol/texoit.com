@@ -63,6 +63,7 @@
 
 body, html {
 	/*background: #F4F4F4;*/
+    overflow-x: hidden;
 }
 
 body, html, input, textarea {
@@ -83,6 +84,9 @@ ul li {
 	margin: 0px;
 }
 
+p { text-transform: lowercase; }
+h4 { text-transform: lowercase; }
+
 .theme-centered {
 	margin-left: auto;
 	margin-right: auto;
@@ -92,7 +96,7 @@ ul li {
 	margin-left: auto;
 	margin-right: auto;
 }
-.theme-panel { position: relative; }
+.theme-panel { position: relative; min-width: 980px; }
 .theme-panel-centered {
 	position: absolute;
 	margin: 0
@@ -122,11 +126,7 @@ ul li {
 
 .theme-header .small-logo-image { height: 50px; }
 
-.theme-footer {
-	margin-top: 20px;
-	display: block;
-}
-
+.panel-we-can-help-you { padding: 70px 0; }
 .we-can-help-you li {
 	color: white;
 	padding: 15px;
@@ -161,6 +161,7 @@ ul li {
 	font-size: 1.1em;
 }
 
+.panel-what-we-have-done { padding: 70px 0; }
 .what-we-have-done li {
 	background: url(/assets/hexagon.png) no-repeat 20px 20px;
 	padding: 15px 15px 15px 80px;
@@ -168,6 +169,14 @@ ul li {
 }
 .what-we-have-done li:nth-child(odd) { background-color: #efefef; }
 .what-we-have-done li:nth-child(even) { background-color: #dedede; }
+
+.what-we-have-done h4 {
+    margin-bottom: 0;
+}
+
+.what-we-have-done p {
+    margin-top: 5px;
+}
 
 .inspirational-quote {
 	font-family: omnes-pro,Whitney,helvetica,arial,sans-serif;
@@ -198,6 +207,7 @@ ul li {
 	color: white;
 	text-transform: lowercase;
 	font-size: 1.5em;
+    min-height: 300px;
 }
 
 .what-we-do h2 {
@@ -210,12 +220,39 @@ ul li {
 .customer-thumbs { margin-top: 50px; }
 .customer-thumbs h2 { font-size: 2em; }
 .list-of-customer-thumb {
-
+    margin: auto auto 30px;
+    display: table;
 }
+
+.panel-customers-description { padding: 70px 0; }
+
+.customers-description {
+    overflow: auto;
+}
+.customers-description > div {
+    display: block;
+    line-height: 1.6em;
+    margin: 20px auto;
+    overflow: auto;
+    max-width: 975px;
+}
+
+.customers-description > div img {
+    float: left;
+    margin: 20px 40px;
+    max-width: 130px;
+}
+.customers-description > div p {
+    float: left;
+    width: 720px;
+}
+
 .list-of-customer-thumb img {
 	max-height: 100px;
 	margin-right: 30px;
 }
+
+.panel-contact-us { padding: 70px 0; }
 
 .map-location {
 	margin: 30px;
