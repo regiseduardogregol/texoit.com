@@ -84,9 +84,6 @@ ul li {
 	margin: 0px;
 }
 
-p { text-transform: lowercase; }
-h4 { text-transform: lowercase; }
-
 .theme-centered {
 	margin-left: auto;
 	margin-right: auto;
@@ -205,7 +202,6 @@ h4 { text-transform: lowercase; }
 .what-we-do {
 	background: rgba( 80,80,80,0.6 );
 	color: white;
-	text-transform: lowercase;
 	font-size: 1.5em;
     min-height: 300px;
 }
