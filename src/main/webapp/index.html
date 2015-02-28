@@ -1,217 +1,215 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TexoIT</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
-		<link rel="stylesheet" href="/assets/theme.css" />
-		<script type="text/javascript" src="/assets/zepto.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
 
-                var panels = $(".what-we-do-foreground-layer .theme-panel")
-                var titles = $(".what-we-do-foreground-layer .theme-panel .theme-panel-centered")
+<head>
+    <title>TexoIT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
+    <script type="text/javascript" src="/assets/js/zepto.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
 
-				function centerWelcomePanel(){
-					var windowWidth = window.innerWidth
-					for ( var i=0; i<panels.length; i++ ){
-						var title = $(titles[i])
-                        var minHeight = $(panels[i]).height();
-						var top = (minHeight - title.height())/2
-						var left = (windowWidth - title.width())/2
-						title.attr("style","top: " + top + "px; left:" + left + "px")
-					}
-					setTimeout( centerWelcomePanel, 500 )
-				}
+            var panels = $(".what-we-do-foreground-layer .theme-panel")
+            var titles = $(".what-we-do-foreground-layer .theme-panel .theme-panel-centered")
 
-				function definePanelHeight(){
-					for ( var i=0; i<panels.length; i++ ){
-						var title = $(titles[i])
-						var panel = $(panels[i])
-                        var minHeight = title.height() + panel.height() + 100;
-						panel.css( "min-height", minHeight + "px" )
-					}
-				}
+            function centerWelcomePanel() {
+                var windowWidth = window.innerWidth
+                for (var i = 0; i < panels.length; i++) {
+                    var title = $(titles[i])
+                    var minHeight = $(panels[i]).height();
+                    var top = (minHeight - title.height()) / 2
+                    var left = (windowWidth - title.width()) / 2
+                    title.attr("style", "top: " + top + "px; left:" + left + "px")
+                }
+                setTimeout(centerWelcomePanel, 500)
+            }
 
-				function makeLocalAnchorsAbleToScrollSmothly(){
-					
-				}
+            function definePanelHeight() {
+                for (var i = 0; i < panels.length; i++) {
+                    var title = $(titles[i])
+                    var panel = $(panels[i])
+                    var minHeight = title.height() + panel.height() + 100;
+                    panel.css("min-height", minHeight + "px")
+                }
+            }
 
-                definePanelHeight()
-				centerWelcomePanel()
-				makeLocalAnchorsAbleToScrollSmothly()
-			})
-		</script>
-	</head>
-	<body>
-		
-		<div class="what-we-do-foreground-layer">
-			<div class="theme-panel what-we-do">
-			
-				<div class="theme-header">
-					<div class="theme-container">
-						<img class="small-logo-image" src="/assets/logo-white.png" />
-					</div>
-				</div>
-	
-				<div class="inspirational-quote theme-centered">
-					<h2 class="theme-panel-centered">
+            function makeLocalAnchorsAbleToScrollSmothly() {
+
+            }
+
+            definePanelHeight()
+            centerWelcomePanel()
+            makeLocalAnchorsAbleToScrollSmothly()
+
+            $('#fullpage').fullpage({
+                sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#4b5eab'],
+                verticalCentered: false,
+                scrollOverflow: true
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="fullpage">
+        <div class="section active" id="section0">
+            <div class="what-we-do-foreground-layer">
+                <div class="theme-panel what-we-do">
+
+                    <div class="theme-header">
+                        <div class="theme-container">
+                            <img class="small-logo-image" src="/assets/imgs/logo-white.png" />
+                        </div>
+                    </div>
+
+                    <div class="inspirational-quote theme-centered">
+                        <h2 class="theme-panel-centered">
 						Perante o mundo que muda,<br/>
                         mais vale pensar a mudança<br/>
                         que mudar o pensamento.
 					</h2>
-				</div>
-	
-			</div>
-		</div>
+                    </div>
 
-		<a name="we-can-help-you">
-			<div class="theme-panel panel-we-can-help-you">
-				
-				<div class="theme-container">
-					<div class="theme-container">
-						<div class="inspirational-quote theme-centered">
-							<h3>Na maioria das vezes, resolver o que o cliente pede nao é suficiente. Espera-se que toda tarefa seja
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section1">
+            <a name="we-can-help-you">
+                <div class="theme-panel panel-we-can-help-you">
+
+                    <div class="theme-container">
+                        <div class="theme-container">
+                            <div class="inspirational-quote theme-centered">
+                                <h3>Na maioria das vezes, resolver o que o cliente pede nao é suficiente. Espera-se que toda tarefa seja
 							tratada como um desafio e que seja encarada com dedicação e disciplina. Nós da Texo estamos comprometidos
 							a encontrar soluções bem dimensionadas para ajudar você a:</h3>
-						</div>
-					</div>
-		
-					<ul class="we-can-help-you theme-centered">
-						<li class="theme-bg-color-one">
-							<h4>TOMAR A FRENTE<br/>E FICAR LÁ</h4>
-							<p>Fomentar ideias para atingir rapidamente o mercado</p>
-						</li>
-						<li class="theme-bg-color-two">
-							<h4>CRIAR PRODUTOS VENCEDORES</h4>
-							<p>Explorar e entregar ofertas disruptivas</p>
-						</li>
-						<li class="theme-bg-color-three">
-							<h4>DESPERTAR O SEU POTENCIAL EMPRESARIAL</h4>
-							<p>Integrar novas experiências digitais aos seus sistemas</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</a>
 
-		<div class="theme-panel panel-what-we-have-done">
-			<div class="theme-container">
+                            </div>
+                        </div>
 
-				<div class="inspirational-quote theme-centered">
-					<h2>O que fazemos</h2>
-					<p>O que temos ofertados aos nossos clientes para que eles atinjam grandes objetivos</p>
-				</div>
+                        <ul class="we-can-help-you theme-centered">
+                            <li class="theme-bg-color-one">
+                                <h4>TOMAR A FRENTE<br/>E FICAR LÁ</h4>
+                                <p>Fomentar ideias para atingir rapidamente o mercado</p>
+                            </li>
+                            <li class="theme-bg-color-two">
+                                <h4>CRIAR PRODUTOS VENCEDORES</h4>
+                                <p>Explorar e entregar ofertas disruptivas</p>
+                            </li>
+                            <li class="theme-bg-color-three">
+                                <h4>DESPERTAR O SEU POTENCIAL EMPRESARIAL</h4>
+                                <p>Integrar novas experiências digitais aos seus sistemas</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="section" id="section2">
+            <div class="theme-panel panel-what-we-have-done">
+                <div class="theme-container">
 
-				<ul class="what-we-have-done">
-					<li>
-						<h4>Revitalizar o ciclo de vida do seu produto</h4>
-						<p>Aplicamos o que há de mais moderno em Continuous Integration e Continuos Delivery para garantir que o time possa focar rapidamente na melhoria do software.</p>
-					</li>
-					<li>
-						<h4>Ajustes de alto desempenho para o seu produto</h4>
-						<p>Garantimos que o seu software esteja dimensionado para as altas demandas de seus clientes. Aplicamos análise de consumo de memória, identificação de gargalos e pontos de falha e criamos plano para evitar que possíveis problemas identificados não se repitam.</p>
-					</li>
-					<li>
-						<h4>Reciclagem do time de desenvolvimento</h4>
-						<p>Aplicamos metodologias modernas ( <i>XP</i>, <i>Scrum</i>, <i>Kanban</i> ) para melhorar a organização do time de desenvolvimento, intensificar a frequência de entregas e, desta forma, atingir o mercado rapidamente.</p>
-					</li>
-					<li>
-						<h4>Desenvolvimento especializado</h4>
-						<p>É muito caro manter um profissional de alto padrão por um ano inteiro sendo que a empresa tem pequenos ciclos de alta demanda que duram poucos meses, com isso oferecemos profissionais qualificados para desenvolver soluções para Web ou integração entre softwares ( A2A, B2B ).</p>
-					</li>
-				</ul>
-			</div>
-		</div>
+                    <div class="inspirational-quote theme-centered">
+                        <h2>O que fazemos</h2>
+                        <p>O que temos ofertados aos nossos clientes para que eles atinjam grandes objetivos</p>
+                    </div>
 
-		<div class="theme-panel panel-customers-description">
-			<div class="theme-container">
-			
-				<div class="inspirational-quote theme-centered">
-					<h2>Nossos clientes</h2>
-				</div>
+                    <ul class="what-we-have-done">
+                        <li>
+                            <h4>Revitalizar o ciclo de vida do seu produto</h4>
+                            <p>Aplicamos o que há de mais moderno em Continuous Integration e Continuos Delivery para garantir que o time possa focar rapidamente na melhoria do software.</p>
+                        </li>
+                        <li>
+                            <h4>Ajustes de alto desempenho para o seu produto</h4>
+                            <p>Garantimos que o seu software esteja dimensionado para as altas demandas de seus clientes. Aplicamos análise de consumo de memória, identificação de gargalos e pontos de falha e criamos plano para evitar que possíveis problemas identificados não se repitam.</p>
+                        </li>
+                        <li>
+                            <h4>Reciclagem do time de desenvolvimento</h4>
+                            <p>Aplicamos metodologias modernas ( <i>XP</i>, <i>Scrum</i>, <i>Kanban</i> ) para melhorar a organização do time de desenvolvimento, intensificar a frequência de entregas e, desta forma, atingir o mercado rapidamente.</p>
+                        </li>
+                        <li>
+                            <h4>Desenvolvimento especializado</h4>
+                            <p>É muito caro manter um profissional de alto padrão por um ano inteiro sendo que a empresa tem pequenos ciclos de alta demanda que duram poucos meses, com isso oferecemos profissionais qualificados para desenvolver soluções para Web ou integração entre softwares ( A2A, B2B ).</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-				<!--div class="list-of-customer-thumb">
+        <div class="section" id="section3">
+            <div class="theme-panel panel-customers-description">
+                <div class="theme-container">
+
+                    <div class="inspirational-quote theme-centered">
+                        <h2>Nossos clientes</h2>
+                    </div>
+
+                    <!--div class="list-of-customer-thumb">
 					<img src="/assets/logo-totvs.jpg" />
 					<img src="/assets/logo-navita.jpg" />
 				</div -->
 
-				<div class="customers-description">
-					
-					<div class="ibratan">
-                        <img src="/assets/logo-ibratan.jpg" />
-                        <p>
-                            Especializada em inteligência para avaliação de risco e concessão de crédito, a Ibratan contou com o apoio da
-                            Texo na reformulação do seu processo de desenvolvimento e na escolha de novas tecnologias para suas soluções.
-                            Após quase 20 anos no mercado para alcançar maiores resultados, ela adotou <b><i>Scrum</i> e <i>XP</i></b> em seu processo de desenvolvimento;
-                            <b>revitalizou a interface</b> de seus produtos com as novas tendências do <b>HTML 5</b> e preparou sua base de inteligência para
-                            <b>suportar altas demandas</b> de consultas de crédito.
-                        </p>
-					</div>
+                    <div class="customers-description">
 
-                    <div class="thomson-reuters">
-                        <img src="/assets/logo-thomson-reuters.jpg" />
-                        <p>
-                            Atuando em praticamente todos os continentes, a Thomson Reuters é uma fonte respeitável de inteligência da informação
-                            oferencendo centenas de soluções à médias e grandes empresas. Desde de 2014, ela contou com o apoio de profissionais especializados
-                            em <b>desenvolvimento de software</b> e <b><i>Quality Assurance</i></b> da Texo para dar vazão nas altas demandas de seus clientes.
-                            Entre consultorias e treinamentos ofertados e o bom convivio de nossos profissionais com a TR, esta parceria se mostrou
-                            um grande aprendizado para ambas as partes, resultando em softwares de alta qualidade e performance.
-                        </p>
+                        <div class="ibratan">
+                            <img src="/assets/imgs/logo-ibratan.jpg" />
+                            <p>
+                                Especializada em inteligência para avaliação de risco e concessão de crédito, a Ibratan contou com o apoio da Texo na reformulação do seu processo de desenvolvimento e na escolha de novas tecnologias para suas soluções. - Após quase 20 anos no mercado para alcançar maiores resultados, ela adotou <b>Scrum e XP</b> em seu processo de desenvolvimento; + Após quase 20 anos no mercado para alcançar maiores resultados, ela adotou <b><i>Scrum</i> e <i>XP</i></b> em seu processo de desenvolvimento;
+                                <b>revitalizou a interface</b> de seus produtos com as novas tendências do <b>HTML 5</b> e preparou sua base de inteligência para
+                                <b>suportar altas demandas</b> de consultas de crédito.
+                            </p>
+
+                        </div>
+
+                        <div class="thomson-reuters">
+                            <img src="/assets/imgs/logo-thomson-reuters.jpg" />
+                            <p>
+                                Atuando em praticamente todos os continentes, a Thomson Reuters é uma fonte respeitável de inteligência da informação oferencendo centenas de soluções à médias e grandes empresas. Desde de 2014, ela contou com o apoio de profissionais especializados - em <b>desenvolvimento de software</b> e <b>Quality Assurance</b> da Texo para dar vazão nas altas demandas de seus clientes. - Entre consultorias e treinamentos ofertados e o bom convivio de nossos profissionais com a T&amp;R, esta parceria se mostrou + em <b>desenvolvimento de software</b> e <b><i>Quality Assurance</i></b> da Texo para dar vazão nas altas demandas de seus clientes. + Entre consultorias e treinamentos ofertados e o bom convivio de nossos profissionais com a TR, esta parceria se mostrou um grande aprendizado para ambas as partes, resultando em softwares de alta qualidade e performance.
+                            </p>
+                        </div>
+
+                        <div class="thomson-reuters">
+                            <img src="/assets/imgs/logo-totvs.jpg" />
+                            <p>
+                                Além de inovadora em software, serviços e tecnologia, a TOTVS também foi pioneira no mercado de TI da América Latina ao abrir seu capital. Suas eficientes operações em ERP sao complementadas por um amplo portfólio de soluções verticais e serviços, como consultoria, BPO e cloud computing. A Texo teve uma participação crucial para a entrega do software de <i>E-learning</i>, atuando no módulo de conferência colaborativa escrevendo a interface em <b>HTML5</b> responsivo (<i>desktop</i> e <i>tablet</i>). aplicação da nova identidade visual do TDI migração do motor do Portal Totvs para o Fluig que é a coisa mais importante do universo integração contínua e gerenciamento de artefatos melhoria de processos de equipe
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <div class="theme-panel panel-contact-us">
+                <div class="theme-container">
+
+                    <div class="inspirational-quote theme-centered theme-bg-color-two">
+                        <h2>Contato</h2>
                     </div>
 
-                    <div class="thomson-reuters">
-                        <img src="/assets/logo-totvs.jpg" />
-                        <p>
-                            Além de inovadora em software, serviços e tecnologia, a TOTVS também foi pioneira no mercado de TI da América Latina ao abrir seu capital.
-                            Suas eficientes operações em ERP sao complementadas por um amplo portfólio de soluções verticais e serviços, como consultoria, BPO e cloud computing.
-                            A Texo teve uma participação crucial para a entrega do software de <i>E-learning</i>, atuando no módulo de conferência colaborativa escrevendo a interface
-                            em <b>HTML5</b> responsivo (<i>desktop</i> e <i>tablet</i>).
-                            aplicação da nova identidade visual do TDI
-                            migração do motor do Portal Totvs para o Fluig que é a coisa mais importante do universo
-                            integração contínua e gerenciamento de artefatos
-                            melhoria de processos de equipe
-                        </p>
+                    <div class="contact-us">
+                        <div class="map-location">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.2050939488335!2d-48.84498156445269!3d-26.2999224749824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb04a0077dcc3%3A0xff272a09739e9aae!2sR.+Princesa+Isabel%2C+238+-+Centro%2C+Joinville+-+SC%2C+89201-270%2C+Brazil!5e0!3m2!1sen!2sbr!4v1424993797379" width="600" height="450" frameborder="0" style="border:0"></iframe>
+
+                        </div>
+                        <div class="description">
+
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-				</div>
-
-			</div>
-		</div>
-
-		<!--div class="theme-panel">
-			<div class="theme-container">
-			
-				<div class="inspirational-quote theme-centered">
-					<h2>What they say about us</h2>
-					<p>We are always happy to receive a honest feedback.</p>
-				</div>
-
-				<ul class="honest-customer-quotes">
-					<li>
-
-					</li>
-				</ul>
-			</div>
-		</div-->
-
-		<div class="theme-panel panel-contact-us theme-bg-color-two">
-			<div class="theme-container">
-			
-				<div class="inspirational-quote theme-centered">
-					<h2>Contato</h2>
-				</div>
-
-				<div class="contact-us">
-					<div class="map-location">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.2050939488335!2d-48.84498156445269!3d-26.2999224749824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb04a0077dcc3%3A0xff272a09739e9aae!2sR.+Princesa+Isabel%2C+238+-+Centro%2C+Joinville+-+SC%2C+89201-270%2C+Brazil!5e0!3m2!1sen!2sbr!4v1424993797379" width="600" height="450" frameborder="0" style="border:0"></iframe>
-					</div>
-					<div class="description">
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
 </html>
