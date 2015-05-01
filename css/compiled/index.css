@@ -418,7 +418,7 @@
    #clients .client .client-ibratan {
     background: url("../../img/client-ibratan.png") 0 -75px; }
     #clients .client .client-ibratan:hover {
-      background-position: 0px 0px; }
+      background-position: 0px 0px; } 
    #clients .client .client-totvs {
     background: url("../../img/client-totvs.png") 0 -75px; }
     #clients .client .client-totvs:hover {
@@ -426,6 +426,18 @@
    #clients .client .client-totvslabs {
     background: url("../../img/client-totvslabs.png") 0 -75px; }
     #clients .client .client-totvslabs:hover {
+      background-position: 0px 0px; }
+    #clients .client .client-guiabolso {
+    background: url("../../img/client-guiabolso.png") 0 -75px; }
+    #clients .client .client-guiabolso:hover {
+      background-position: 0px 0px; }
+    #clients .client .client-navita {
+    background: url("../../img/client-navita.png") 0 -75px; }
+    #clients .client .client-navita:hover {
+      background-position: 0px 0px; }
+    #clients .client .client-solucaolab {
+    background: url("../../img/client-solucaolab.png") 0 -75px; }
+    #clients .client .client-solucaolab:hover {
       background-position: 0px 0px; }
 
 

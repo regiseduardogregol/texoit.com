@@ -42,8 +42,8 @@ header {
     .navbar.navbar-inverse.navbar-static-top {
       background-color: #252528; }
       .navbar.navbar-inverse.navbar-static-top .container {
-        margin-top: 0;
-        margin-bottom: 0; }
+        margin-top: 10px;
+        margin-bottom: 10px; }
     .navbar.navbar-inverse .nav > li > a {
       font-size: 13px;
       font-weight: bold;
