@@ -402,42 +402,42 @@
     #clients .client .img:hover {
       cursor: pointer;
       /*box-shadow: 0px 0px 2px 0px rgb(155, 155, 155);*/
-      border-radius: 8px; }
-  #clients .client .client1 {
-    background: url("../../img/client1.png") 0 -75px; }
-    #clients .client .client1:hover {
-      background-position: 1px 0px; }
-  #clients .client .client2 {
-    background: url("../../img/client2.png") 0 -75px; }
-    #clients .client .client2:hover {
-      background-position: -1px 0px; }
-  #clients .client .client3 {
-    background: url("../../img/client3.png") 0 -76px; }
-    #clients .client .client3:hover {
-      background-position: 0px 0px; }
+      border-radius: 8px; }  
+   #clients .client-row {
+	   padding-top: 20px; }
+	#clients .client-row:first-child {
+	   padding-top: 0px; }
    #clients .client .client-ibratan {
-    background: url("../../img/client-ibratan.png") 0 -75px; }
+    background: url("../../img/customers/client-ibratan.png") 0 -75px; }
     #clients .client .client-ibratan:hover {
       background-position: 0px 0px; } 
    #clients .client .client-totvs {
-    background: url("../../img/client-totvs.png") 0 -75px; }
+    background: url("../../img/customers/client-totvs.png") 0 -75px; }
     #clients .client .client-totvs:hover {
       background-position: 0px 0px; }
    #clients .client .client-totvslabs {
-    background: url("../../img/client-totvslabs.png") 0 -75px; }
+    background: url("../../img/customers/client-totvslabs.png") 0 -75px; }
     #clients .client .client-totvslabs:hover {
       background-position: 0px 0px; }
     #clients .client .client-guiabolso {
-    background: url("../../img/client-guiabolso.png") 0 -75px; }
+    background: url("../../img/customers/client-guiabolso.png") 0 -75px; }
     #clients .client .client-guiabolso:hover {
       background-position: 0px 0px; }
     #clients .client .client-navita {
-    background: url("../../img/client-navita.png") 0 -75px; }
+    background: url("../../img/customers/client-navita.png") 0 -75px; }
     #clients .client .client-navita:hover {
       background-position: 0px 0px; }
     #clients .client .client-solucaolab {
-    background: url("../../img/client-solucaolab.png") 0 -75px; }
+    background: url("../../img/customers/client-solucaolab.png") 0 -75px; }
     #clients .client .client-solucaolab:hover {
+      background-position: 0px 0px; }
+	#clients .client .client-sys2b {
+    background: url("../../img/customers/client-sys2b.png") 0 -75px; }
+    #clients .client .client-sys2b:hover {
+      background-position: 0px 0px; }
+	#clients .client .client-milagro {
+    background: url("../../img/customers/client-milagro.png") 0 -75px; }
+    #clients .client .client-milagro:hover {
       background-position: 0px 0px; }
 
 
