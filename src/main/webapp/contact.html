@@ -62,25 +62,25 @@
 				<p>
 					Deseja entrar em contato? Envie sua mensagem pelo formulário abaixo e logo responderemos. Ou, se preferir, envie um e-mail diretamente para <a href="mailto:contato@texoit.com?subject=Contato efetuado via site."> contato@texoit.com</a>.
                 </p>
-				<form>
+				<form id="contactForm">
 					<div class="row form">
 						<div class="col-sm-6 row-col">
 							<div class="box">
-								<input class="name form-control" type="text" placeholder="Nome">
-								<input class="mail form-control" type="text" placeholder="E-mail">
-								<input class="phone form-control" type="text" placeholder="Telefone">
+								<input id="name" class="name form-control" type="text" placeholder="Nome">
+								<input id="email" class="mail form-control" type="text" placeholder="E-mail">
+								<input id="phone" class="phone form-control" type="text" placeholder="Telefone">
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="box">
-								<textarea placeholder="Escreva sua mensagem aqui..." class="form-control"></textarea>
+								<textarea id="messageContent" placeholder="Escreva sua mensagem aqui..." class="form-control"></textarea>
 							</div>
 						</div>
 					</div>
 
 					<div class="row submit">
 						<div class="col-md-3 right">
-							<input type="submit" value="Enviar a mensagem">
+							<input type="submit" value="Enviar a mensagem" onclick="submitEmail();return false;">
 						</div>
 					</div>
 				</form>
@@ -158,6 +158,7 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/contact.js"></script>
 </body>
 
 </html>
