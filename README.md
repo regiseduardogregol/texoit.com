@@ -5,7 +5,7 @@ Texo's web site
 **Prerequisites:** https://developers.openshift.com/en/managing-client-tools.html
 
 1. **Ask for permission:**  
-Send an email to infra@texoit.com to request deploy privileges.
+Send an email with your Openshift user to infra@texoit.com to request deploy privileges.
 
 2. **Add the Openshift git repo:**  
 `rhc git-clone ucwebsite`
