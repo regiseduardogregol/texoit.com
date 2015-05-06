@@ -1,39 +1,31 @@
-function submitEmail() {
+$('contactForm').submit(function(event) {
 	var form = document.forms[0];
 	var name = form.elements["name"].value;
 	var email = form.elements["email"].value;
 	var phone = form.elements["phone"].value;
-	var messageContent = 
-		"Nome: " + name +
-		"\nE-Mail: " + email +
-		"\nTelefone: " + phone +
-		"\n________\nConteúdo da mensagem:\n\n" +
-		form.elements["messageContent"].value;
+	var content = form.elements["messageContent"].value;
 	
-	var requestData = {
-		"key": "KEY GOES HERE",
-		"message": {
-			"text": messageContent,
-			"subject": "Contato via site",
-			"from_email": email,
-			"from_name": name,
-			"to": [
-				{
-					"email": "andre.cardoso@texoit.com"
-				}
-			],
-			"important": false,
-			"merge": true,
-			"merge_language": "mailchimp",
-			"tags": [
-				"contato-site"
-			]
-		},
-		"async": false
+	var emailMessage = {
+		"name": name,
+		"email": email,
+		"phone": phone,
+		"content": content
 	};
 
+	$.ajax({
+		type: "POST",
+		url: "rest/protected/t3x01trul3z/emails",
+		data: JSON.stringify(emailMessage),
+		contentType: "application/json",
+		success: function( data, status, errorThrown ) {
+			responseOK(data, status, errorThrown);
+		},
+		error: function( data, status, errorThrown ) {
+			responseError(data, status, errorThrown);
+		}	
+	})
 	/*
-	$.post( "https://mandrillapp.com/api/1.0/messages/send.json", requestData)
+	$.post( "rest/protected/t3x01trul3z/emails", JSON.stringify(emailMessage))
 		.done(function( data ) {
 			alert( "DONE: " + JSON.stringify(data) );
 		})
@@ -41,7 +33,15 @@ function submitEmail() {
 			alert( "ERROR: " + JSON.stringify(data) );
 		});
 	*/
-	alert(JSON.stringify(requestData))
+	//alert(JSON.stringify(emailMessage))
 
-	return false;
+	event.preventDefault();
+}
+
+function responseOK(data, status, errorThrown) {
+	alert( "DONE: " + JSON.stringify(data) );
+}
+
+function responseError(data, status, errorThrown) {
+	alert( "ERROR: " + JSON.stringify(data) );
 }
