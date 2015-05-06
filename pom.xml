@@ -12,7 +12,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        
+        <version.lombok>1.14.4</version.lombok>
     </properties>
+    
+    <repositories>
+		<repository>
+			<id>projectlombok.org</id>
+			<url>http://projectlombok.org/mavenrepo</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
     
     <dependencies>
         <dependency>
@@ -20,6 +35,17 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${version.lombok}</version>
+			<scope>provided</scope>
+		</dependency>
+        <dependency>
+        	<groupId>com.mandrillapp.wrapper.lutung</groupId>
+        	<artifactId>lutung</artifactId>
+        	<version>0.0.5</version>
         </dependency>
     </dependencies>
 

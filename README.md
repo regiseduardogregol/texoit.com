@@ -1,5 +1,5 @@
 # texoit.com
-Texo's web site
+Texo's website
 
 ## Deploy instructions
 **Prerequisites:** https://developers.openshift.com/en/managing-client-tools.html
