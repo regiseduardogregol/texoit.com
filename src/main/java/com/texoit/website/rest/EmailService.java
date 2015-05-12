@@ -20,9 +20,7 @@ import com.microtripit.mandrillapp.lutung.view.MandrillMessage.Recipient;
 @RequestScoped
 public class EmailService {
 
-	private static String MANDRILL_API_KEY =
-			"";
-	//"UKct8GU_xMpaKdHEGslCYg";
+	private static String MANDRILL_API_KEY = "UKct8GU_xMpaKdHEGslCYg";
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -40,7 +38,7 @@ public class EmailService {
 
 			final Recipient recipient = new Recipient();
 			recipient.setName("Contato");
-			recipient.setEmail("andre.cardoso@texoit.com");
+			recipient.setEmail("contato@texoit.com");
 			final List<MandrillMessage.Recipient> recipientList = new ArrayList<>();
 			recipientList.add(recipient);
 			message.setTo(recipientList);
