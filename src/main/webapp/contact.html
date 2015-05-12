@@ -70,27 +70,33 @@
 			</div>
 			<div class="row contact">
 				<p>
-					Deseja entrar em contato? Envie sua mensagem pelo formulário abaixo e logo responderemos. Ou, se preferir, envie um e-mail diretamente para <a href="mailto:contato@texoit.com?subject=Contato efetuado via site."> contato@texoit.com</a>.
+					Deseja entrar em contato? Envie sua mensagem pelo formulário abaixo e logo responderemos. Ou, se preferir, envie um e-mail diretamente para <a href="mailto:contato@texoit.com?subject=Contato efetuado via site">contato@texoit.com</a>.
                 </p>
+                <div id="contactSuccess" style="display:none">
+                	<p>Agradecemos o contato!</p>
+                </div>
+                <div id="contactError" style="display:none" class="alert alert-danger" role="alert">
+					Ops! Não foi possível enviar a mensagem... Tente novamente mais tarde, ou <a class="alert-link" href="mailto:contato@texoit.com?subject=Contato efetuado via site">envie um email</a>.
+				</div>
 				<form id="contactForm">
 					<div class="row form">
 						<div class="col-sm-6 row-col">
 							<div class="box">
-								<input id="name" class="name form-control" type="text" placeholder="Nome">
-								<input id="email" class="mail form-control" type="email" placeholder="E-mail">
+								<input id="name" class="name form-control" type="text" placeholder="Nome" required="required">
+								<input id="email" class="mail form-control" type="email" placeholder="E-mail" required="required">
 								<input id="phone" class="phone form-control" placeholder="Telefone" type="tel" required="required" maxlength="15" name="phone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="box">
-								<textarea id="messageContent" placeholder="Escreva sua mensagem aqui..." class="form-control"></textarea>
+								<textarea id="messageContent" placeholder="Escreva sua mensagem aqui..." class="form-control" required="required"></textarea>
 							</div>
 						</div>
 					</div>
 
 					<div class="row submit">
 						<div class="col-md-3 right">
-							<input type="submit" value="Enviar a mensagem">
+							<input id="contactSubmit" type="submit" value="Enviar a mensagem">
 						</div>
 					</div>
 				</form>
@@ -120,7 +126,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div style="pointer-events: none;">
 				<iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.8217788513316!2d-48.844608000000015!3d-26.299876999999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb035ff7f144b%3A0x5aae4d34b3bf38f!2sTexo+IT!5e0!3m2!1spt-BR!2sbr!4v1430257553826&scrollwheel=false"></iframe>
 			</div>

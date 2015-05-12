@@ -1,4 +1,7 @@
-$('contactForm').submit(function(event) {
+$('#contactForm').submit(function(event) {
+	$('#contactSubmit').prop("disabled", true);
+	$('#contactError').fadeOut(250);
+
 	var form = document.forms[0];
 	var name = form.elements["name"].value;
 	var email = form.elements["email"].value;
@@ -23,25 +26,19 @@ $('contactForm').submit(function(event) {
 		error: function( data, status, errorThrown ) {
 			responseError(data, status, errorThrown);
 		}	
-	})
-	/*
-	$.post( "rest/protected/t3x01trul3z/emails", JSON.stringify(emailMessage))
-		.done(function( data ) {
-			alert( "DONE: " + JSON.stringify(data) );
-		})
-		.fail(function( data ) {
-			alert( "ERROR: " + JSON.stringify(data) );
-		});
-	*/
-	//alert(JSON.stringify(emailMessage))
+	});
 
 	event.preventDefault();
-}
+});
 
 function responseOK(data, status, errorThrown) {
-	alert( "DONE: " + JSON.stringify(data) );
+	$('#contactForm').fadeOut(250, function(){
+		$('#contactSuccess').fadeIn(250);
+	});
+	$('#contactSubmit').prop("disabled", false);
 }
 
 function responseError(data, status, errorThrown) {
-	alert( "ERROR: " + JSON.stringify(data) );
+	$('#contactError').fadeIn(500);
+	$('#contactSubmit').prop("disabled", false);
 }
