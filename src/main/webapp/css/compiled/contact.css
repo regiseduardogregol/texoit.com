@@ -141,6 +141,11 @@
         #contact .map .box_wrapp a.btn:hover {
           background: #252528; }
 
+#contactSuccess {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .contacticos {
   background: url("../../img/contact_icos.png") no-repeat;
   width: 24px;
