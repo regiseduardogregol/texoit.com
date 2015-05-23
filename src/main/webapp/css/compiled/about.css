@@ -59,7 +59,7 @@
           #team .people .bio_box .info p.area {
             color: #98989A;
             font-style: italic;
-            font-style: 16px;
+            font-style: 12px;
             margin-bottom: 18px; }
         #team .people .bio_box .info a {
           margin-right: 10px; }
@@ -220,3 +220,8 @@
         display: none; }
     #process .areas .last_circle {
       margin-top: 0; } }
+
+
+.label-texo {
+	background-color: #4B5EAB;
+}
